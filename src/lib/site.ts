@@ -21,7 +21,7 @@ export const siteConfig = {
   downloadUrl:
     'https://bos.liao-hai.chat/yxq/%e7%94%b5%e5%bd%b1%e7%8b%97.apk',
   // 百度统计
-  baiduStatsId: '23a0259852427a0c040f669ffca6b00d',
+  baiduStatsId: '167256f794a482998e6576d78df06a64',
   keywords: [
     '电影狗',
     '电影狗app',
