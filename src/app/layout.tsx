@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
     default: '电影狗 - 高清影视追剧应用安卓版下载',
-    template: '%s | 电影狗',
+    template: '电影狗 | %s',
   },
   description: siteConfig.description,
   keywords: siteConfig.keywords,
