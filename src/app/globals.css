@@ -4,6 +4,9 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  --color-brand: #e50914;
+  --color-brand-dark: #b20710;
+  --color-brand-green: #47c43c;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-sidebar-ring: var(--sidebar-ring);
@@ -55,25 +58,25 @@
 }
 
 :root {
-  --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
+  --radius: 0.75rem;
+  --background: oklch(0.984 0.003 247.858);
+  --foreground: oklch(0.203 0.012 256.792);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
+  --card-foreground: oklch(0.203 0.012 256.792);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
+  --popover-foreground: oklch(0.203 0.012 256.792);
+  --primary: #e50914;
   --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.968 0.006 256.199);
+  --secondary-foreground: oklch(0.208 0.013 256.538);
+  --muted: oklch(0.968 0.006 256.199);
+  --muted-foreground: #5a5a63;
+  --accent: oklch(0.968 0.006 256.199);
+  --accent-foreground: oklch(0.208 0.013 256.538);
   --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
+  --border: oklch(0.929 0.013 255.508);
+  --input: oklch(0.929 0.013 255.508);
+  --ring: #e50914;
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
@@ -134,4 +137,37 @@
 
 body {
   @apply font-sans;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* 电影感放射性光晕背景 */
+.cinema-glow {
+  background:
+    radial-gradient(60% 60% at 70% 10%, rgb(229 9 20 / 0.18), transparent 60%),
+    radial-gradient(50% 50% at 15% 85%, rgb(71 196 60 / 0.08), transparent 60%),
+    #0b0b10;
+}
+
+/* 柔和入场动画 */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-fade-in-up {
+  animation: fade-in-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in-up {
+    animation: none;
+  }
 }
